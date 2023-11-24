@@ -5,8 +5,8 @@ import { CreateMessageDto } from './dtos/create-message.dto';
 @Controller('messages')
 export class MessagesController {
   private messagesService: MessagesService;
-  constructor() {
-    this.messagesService = new MessagesService();
+  constructor(MessagesService: MessagesService) {
+    this.messagesService = MessagesService;
   }
   @Get('/')
   getAll() {
@@ -14,7 +14,7 @@ export class MessagesController {
   }
 
   @Get('/:id')
-  getOne(@Param() id: number) {
+  getOne(@Param('id') id: number) {
     return this.messagesService.getOne(id);
   }
 
