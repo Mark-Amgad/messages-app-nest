@@ -3,11 +3,16 @@
 GET http://localhost:3000/messages
 
 
+### get one message
+
+GET http://localhost:3000/messages/10
+
+
 ### create one message
 
 POST http://localhost:3000/messages
 content-type: application/json
 
 {
-    "name" : "Mark Amgad"
+    "content" : "Hallo Mark"
 }
