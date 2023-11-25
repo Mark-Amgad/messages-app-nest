@@ -5,7 +5,7 @@ GET http://localhost:3000/messages
 
 ### get one message
 
-GET http://localhost:3000/messages/281
+GET http://localhost:3000/messages/197
 
 
 ### create one message
